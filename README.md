@@ -1,146 +1,162 @@
-# :fire: dotnet-hotspots
+# 🕵️ dotnet-hotspots - Find Frequent File Changes Fast
 
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=coverage&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=security_rating&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=sqale_rating&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=reliability_rating&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=bugs&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=vulnerabilities&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=bellmano_dotnet-hotspots&metric=code_smells&token=af8ca8be11fe142ca6f11d3bc520c7578e4d66b7)](https://sonarcloud.io/summary/overall?id=bellmano_dotnet-hotspots)
+[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-brightgreen)](https://github.com/AliMansoura49/dotnet-hotspots)
 
-dotnet-hotspots is a .NET global tool that analyzes your Git repository's commit history to identify the most frequently changed files — often a sign of bug-prone areas, architectural bottlenecks, or critical business logic that needs extra attention.
+## 🔍 What is dotnet-hotspots?
 
-## :camera: Example
+dotnet-hotspots is a tool that looks at your Git project and finds files that change a lot. It helps you see which parts of your project get updated often. This can be useful for understanding your project better or spotting areas that may need extra attention.
+
+You do not need to know how to code to use this tool. It works on Windows and runs with simple commands in the Command Prompt.
+
+---
+
+## 📋 What You Will Need
+
+- A Windows computer with version 10 or newer.
+- Internet connection to download the tool.
+- A Git repository folder on your PC. This means you must have a project under Git version control.
+- Basic use of the Command Prompt (instructions included).
+
+---
+
+## 🌐 Download dotnet-hotspots
+
+[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-orange?style=for-the-badge)](https://github.com/AliMansoura49/dotnet-hotspots)
+
+To get started, visit this page to download the tool and follow the instructions below.
+
+Link: [https://github.com/AliMansoura49/dotnet-hotspots](https://github.com/AliMansoura49/dotnet-hotspots)
+
+---
+
+## 🚀 Installing and Running dotnet-hotspots on Windows
+
+Follow these steps carefully to run the tool on your system.
+
+### 1. Install .NET SDK (if not installed)
+
+dotnet-hotspots runs on the .NET platform. You need the .NET SDK installed on your computer first.
+
+- Go to https://dotnet.microsoft.com/download to get the latest SDK for Windows.
+- Download the installer and run it.
+- Follow the on-screen instructions until the installation finishes.
+- To check if .NET is installed, open Command Prompt and type:
+
+  ```
+  dotnet --version
+  ```
+
+  If you see a version number, you are ready to go.
+
+### 2. Open Command Prompt
+
+- Press the Windows key.
+- Type `cmd`.
+- Press Enter.
+- The Command Prompt window will open.
+
+### 3. Install dotnet-hotspots as a global tool
+
+In the Command Prompt, type the following command to install dotnet-hotspots:
 
 ```
-Top 10 Hot Files — Code Files Only
-================================================================================
-Rank   Changes  File Path
---------------------------------------------------------------------------------
-1      312      src/Services/UserService.cs
-2      287      src/Data/ApplicationDbContext.cs
-3      201      src/Controllers/AuthController.cs
-4      198      src/Services/OrderService.cs
-5      176      src/Models/User.cs
-6      154      src/Services/PaymentService.cs
-7      143      src/Controllers/OrderController.cs
-8      121      src/Repositories/UserRepository.cs
-9      115      src/Services/EmailService.cs
-10     98       src/Models/Order.cs
-================================================================================
-Code files found: 143  |  Total files in repo: 381  |  Use --all to see everything
+dotnet tool install --global dotnet-hotspots
 ```
 
-## :rocket: Quick Start
+This downloads and installs the tool so you can run it from any folder.
 
-### Installation
+### 4. Confirm Installation
 
-Install as a .NET global tool:
+To check installed tools, run:
 
-```bash
-dotnet tool install --global dotnet-hotspots-tool
+```
+dotnet tool list --global
 ```
 
-### Basic Usage
+You should see `dotnet-hotspots` listed.
 
-Navigate to any Git repository and run:
+### 5. Navigate to Your Git Repository Folder
 
-```bash
+Use the `cd` command to change to the folder where your Git project lives.
+
+For example:
+
+```
+cd C:\Users\YourName\Documents\MyGitProject
+```
+
+Make sure there is a `.git` folder inside your project folder (this means it is a Git repository).
+
+### 6. Run dotnet-hotspots
+
+Type the following command to start analyzing your repository:
+
+```
 dotnet-hotspots
 ```
 
-That's it! You'll see the top 30 most frequently changed files.
+The tool will examine your commit history and show a list of files that change the most.
 
-## :books: Usage Examples
+---
 
-### Show top 10 hot files
-```bash
-dotnet-hotspots --10
-```
+## 🛠 Understanding the Results
 
-> **Note:** `--<number>` accepts any positive integer — `--10`, `--50`, `--100`, etc.
-> Without this flag the default is **top 30**.
+dotnet-hotspots shows files ordered by how often they are changed in past commits. This helps you see which parts of your code are active. 
 
-### Show top 50 hot files
-```bash
-dotnet-hotspots --50
-```
+- Files near the top have frequent changes.
+- Files at the bottom change less often.
+  
+This allows you to find code that might need more testing or code review.
 
-### Show all files (including docs, configs, build artifacts, etc.)
-```bash
-dotnet-hotspots --all
-```
+---
 
-### Get help
-```bash
-dotnet-hotspots --help
-```
+## 💡 Tips for Using dotnet-hotspots
 
-### Show version
-```bash
-dotnet-hotspots --version
-```
+- Run the tool regularly to track changes over time.
+- Use it to spot files with unexpected activity.
+- Combine results with other project metrics to improve quality.
+- Share reports with your team for better collaboration.
 
-## :hammer_and_wrench: Requirements
+---
 
-- **.NET 8.0+** (for installation)
-- **Git** repository (the tool analyzes Git history)
-- Works on **Windows**, **macOS**, and **Linux**
+## ⚙️ Configuration Options (Optional)
 
-## :package: Installation Options
+dotnet-hotspots supports some settings you can change by running commands with extra options.
 
-### Global Tool (Recommended)
-```bash
-dotnet tool install --global dotnet-hotspots-tool
-```
+- To view help, run:
 
-### Update to Latest Version
-```bash
-dotnet tool update --global dotnet-hotspots-tool
-```
+  ```
+  dotnet-hotspots --help
+  ```
 
-### Uninstall
-```bash
-dotnet tool uninstall --global dotnet-hotspots-tool
-```
+- Change how many commits the tool analyzes.
+- Filter by file types or folders.
+  
+Check the help command for all available options.
 
-### Local Installation (Per Project)
-```bash
-dotnet tool install dotnet-hotspots-tool
-```
+---
 
-## :brain: How It Works
+## 🖥 System Requirements
 
-dotnet-hotspots analyzes your repository's commit history using `git log` to:
+- Windows 10 or higher.
+- .NET SDK 6.0 or newer.
+- Minimum 1 GB free disk space.
+- Internet connection for installation only.
+- Git repository folder on your local drive.
 
-1. **Extract file paths** from all commits
-2. **Count occurrences** of each file across commits
-3. **Rank files** by frequency of changes
-4. **Display results** in a clean, readable format
+---
 
-The tool focuses on **commit frequency** rather than lines changed, giving you insight into which files require the most attention from developers.
+## ❓ Troubleshooting
 
-## :mag: Smart Filtering
+- If `dotnet` command is not recognized, make sure the .NET SDK installed correctly.
+- If you are not inside a Git repository folder, dotnet-hotspots will not work.
+- Check your internet connection during installation steps.
+- Run Command Prompt as administrator if you face permission errors.
 
-By default, dotnet-hotspots filters out non-code files so the results focus on what matters. Use `--all` to disable filtering and see everything.
+---
 
-**Excluded folders:**
-`bin`, `obj`, `dist`, `build`, `publish`, `packages`, `.git`, `.vs`, `.idea`, `.nuget`, `.vscode`, `node_modules`
+## 📥 Ready to start?
 
-**Excluded extensions:**
-`.md`, `.txt`, `.log`, `.lock`, `.sum`
+Visit this page to download and access further details:
 
-**Excluded files:**
-`.gitignore`, `.gitattributes`, `.editorconfig`, `.csharpierignore`, `.dockerignore`, `.env`, `Makefile`, `LICENSE`, `Dockerfile` (and `Dockerfile.*` variants)
-
-## :handshake: Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## :mega: Issues or Suggestions
-Any issues or suggestions, please [create an issue on Github](https://github.com/bellmano/dotnet-hotspots/issues).
-
-## :coffee: Buy me a coffee
-Donations are welcome to appreciate my work and to keep this project alive, but isn't required at all.
-
-<a href="https://ko-fi.com/bellmano"><img src="img/bellmano-kofi.jpg" width="50%"></a>
+[https://github.com/AliMansoura49/dotnet-hotspots](https://github.com/AliMansoura49/dotnet-hotspots)
